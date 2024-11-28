@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+<div class="container">
+  <h2>Registrar Paciente</h2>
+  
+  <form (ngSubmit)="registrarPaciente()" #pacienteForm="ngForm">
+    <div class="form-group">
+      <label for="ci">  <i class="fas fa-id-card icon"></i>Cédula</label>
+      <span class="text-danger">*</span>
+      <input
+        type="text"
+        id="ci"
+        name="ci"
+        [(ngModel)]="nuevoPaciente.ci"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <span class="text-danger">*</span>
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        [(ngModel)]="nuevoPaciente.nombre"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="apellido">Apellido</label>
+      <span class="text-danger">*</span>
+      <input
+        type="text"
+        id="apellido"
+        name="apellido"
+        [(ngModel)]="nuevoPaciente.apellido"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="fechaNacimiento">Fecha de Nacimiento</label>
+      <span class="text-danger">*</span>
+      <input
+        type="date"
+        id="fechaNacimiento"
+        name="fechaNacimiento"
+        [(ngModel)]="nuevoPaciente.fechaNacimiento"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="sexo">Sexo</label>
+      <span class="text-danger">*</span>
+      <select
+        id="sexo"
+        name="sexo"
+        [(ngModel)]="nuevoPaciente.sexo"
+        class="form-control"
+        required
+      >
+        <option value="M">Masculino</option>
+        <option value="F">Femenino</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Registrar</button>
+  </form>
+</div>

@@ -1,0 +1,36 @@
+<div class="buscar-registros">
+    <h2>Buscar Registros Médicos</h2>
+  
+    <!-- Formulario de criterios -->
+    <form (ngSubmit)="buscarRegistros()">
+      <div *ngFor="let campo of ['medico', 'institucion', 'tipo', 'diagnostico']">
+        <label for="{{ campo }}">{{ campo | titlecase }}</label>
+        <input
+          id="{{ campo }}"
+          type="text"
+          [(ngModel)]="criterios[campo]"
+          name="{{ campo }}"
+          placeholder="Ingrese {{ campo }}"
+        />
+      </div>
+      <button type="submit">Buscar</button>
+    </form>
+  
+    <!-- Indicador de carga -->
+    <div *ngIf="cargando">Buscando registros...</div>
+  
+    <!-- Manejo de errores -->
+    <div *ngIf="error" class="error">{{ error }}</div>
+  
+    <!-- Resultados -->
+    <div *ngIf="registros.length > 0">
+      <h3>Resultados</h3>
+      <ul>
+        <li *ngFor="let registro of registros">
+          <strong>{{ registro.tipo }}</strong> - {{ registro.fecha }} - {{ registro.medico }} en {{ registro.institucion }}
+        </li>
+      </ul>
+    </div>
+  
+    <div *ngIf="!registros.length && !cargando && !error">No se encontraron registros.</div>
+  </div>

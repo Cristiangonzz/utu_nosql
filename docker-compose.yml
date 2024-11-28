@@ -1,0 +1,15 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./proyecto
+      dockerfile: dockerfile
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build:
+      context: ./nosql
+      dockerfile: dockerfile
+    ports:
+      - "4200:4200"

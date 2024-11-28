@@ -1,0 +1,66 @@
+<div class="container">
+    <h2>Registrar Registro Médico</h2>
+    <form (ngSubmit)="registrarRegistro(pacienteForm)" #pacienteForm="ngForm">
+      <div class="form-group">
+        <label for="ci">Cédula:</label>
+        <span class="text-danger">*</span>
+        <input type="text" id="ci" name="ci" [(ngModel)]="ci" class="form-control" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="fecha">Fecha del Registro</label>
+        <input type="date" id="fecha" name="fecha" [(ngModel)]="nuevoRegistro.fecha" class="form-control" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="tipo">Tipo de Registro</label>
+        <span class="text-danger">*</span>
+        <select
+          id="tipo"
+          name="tipo"
+          [(ngModel)]="nuevoRegistro.tipo"
+          class="form-control"
+          required
+        >
+          <option value="Consulta">Consulta</option>
+          <option value="Examen">Examen</option>
+          <option value="Internación">Internación</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="diagnostico">Diagnóstico</label>
+        <span class="text-danger">*</span>
+        <textarea id="diagnostico" name="diagnostico" [(ngModel)]="nuevoRegistro.diagnostico" class="form-control" required></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="medico">Médico</label>
+        <span class="text-danger">*</span>
+        <input type="text" id="medico" name="medico" [(ngModel)]="nuevoRegistro.medico" class="form-control" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="institucion">Institución</label>
+        <span class="text-danger">*</span>
+        <input type="text" id="institucion" name="institucion" [(ngModel)]="nuevoRegistro.institucion" class="form-control" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="descripcion">Descripción</label>
+        <span class="text-danger">*</span>
+        <textarea id="descripcion" name="descripcion" [(ngModel)]="nuevoRegistro.descripcion" class="form-control"></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="medicacion">Medicamentos Recetados</label>
+        <input type="text" id="medicacion" name="medicacion" [(ngModel)]="nuevoRegistro.medicacion" class="form-control" />
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="pacienteForm.invalid">Registrar Registro Médico</button>
+    </form>
+  
+    <!-- Mensaje de éxito o error -->
+    <div *ngIf="mensajeExito" class="alert alert-success mt-3">{{ mensajeExito }}</div>
+    <div *ngIf="mensajeError" class="alert alert-danger mt-3">{{ mensajeError }}</div>
+  </div>

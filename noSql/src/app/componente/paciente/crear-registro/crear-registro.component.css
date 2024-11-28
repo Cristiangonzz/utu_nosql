@@ -1,0 +1,120 @@
+/* Estilo global para la página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9f5f7; /* Color suave para un fondo limpio y profesional */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos para el contenedor del formulario */
+  .container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 35px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    border: 1px solid #d3e0e9; /* Borde sutil en azul claro */
+  }
+  
+  /* Estilos para el título */
+  h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #007bb5; /* Color azul, relacionado con la medicina */
+    font-weight: 600;
+  }
+  
+  /* Estilos para los campos de formulario */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-size: 14px;
+    color: #5a5a5a; /* Color gris oscuro para las etiquetas */
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+  
+  input.form-control,
+  select.form-control {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f1f8f7; /* Color de fondo suave y limpio */
+    transition: all 0.3s ease;
+  }
+  
+  input.form-control:focus,
+  select.form-control:focus {
+    border-color: #007bb5; /* Azul brillante en el foco */
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 123, 182, 0.5); /* Sombra azul para resaltar */
+  }
+  
+  /* Estilo para los íconos médicos */
+  input.form-control::placeholder {
+    color: #b0b0b0;
+    font-style: italic;
+  }
+  
+  /* Estilo para el selector de género con íconos */
+  select.form-control option {
+    padding: 8px;
+  }
+  
+  /* Estilo para el botón de submit */
+  button.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #28a745; /* Verde, asociado con la salud */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.btn:hover {
+    background-color: #218838; /* Verde oscuro en hover */
+  }
+  
+  button.btn:focus {
+    outline: none;
+  }
+  
+  /* Estilo para los íconos médicos y detalles adicionales */
+  .icon {
+    font-size: 20px;
+    color: #007bb5;
+    margin-right: 10px;
+  }
+  
+  /* Separador entre los campos de formulario */
+  hr {
+    border-top: 1px solid #d3e0e9;
+    margin: 20px 0;
+  }
+  
+  /* Estilos para mensajes de éxito o error */
+  .success-message {
+    color: #28a745;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .error-message {
+    color: #dc3545;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+  }
